@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">BowlingSam</string>
+    <string name="request_permission">This app needs camera permission.</string>
+    <string name="tv_score">자세 점수 : %.2f</string>
+    <string name="tv_time">시간 : %d</string>
+    <!--    <string name="tfe_pe_tv_model">Model: Movenet Lightning </string>-->
+    <string name="tv_fps">Fps : %d</string>
+    <string name="tv_poseName">자세: %s</string>
+</resources>
