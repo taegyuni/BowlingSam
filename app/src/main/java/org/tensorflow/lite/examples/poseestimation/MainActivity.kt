@@ -7,7 +7,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.fragment_practice_list.*
 
 
-class MainActivity : AppCompatActivity() {
+class   MainActivity : AppCompatActivity() {
 
     private lateinit var homeFragment: HomeFragment
     private lateinit var recordFragment: RecordFragment

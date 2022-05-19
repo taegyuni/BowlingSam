@@ -23,16 +23,22 @@ import android.media.MediaPlayer
 import android.os.Build
 import android.os.Bundle
 import android.os.Process
+import android.text.Layout
 import android.util.Log
 import android.view.*
 import android.widget.*
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.appcompat.widget.LinearLayoutCompat
+import androidx.constraintlayout.widget.ConstraintSet
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.lifecycleScope
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.android.material.bottomsheet.BottomSheetBehavior
+import kotlinx.android.synthetic.main.bottom_sheet_layout.*
+import kotlinx.android.synthetic.main.fragment_record.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import org.tensorflow.lite.examples.poseestimation.camera.CameraSource
@@ -67,6 +73,7 @@ class RecordFragment : Fragment() {
     private lateinit var safeContext: Context
     private lateinit var recordButton: ImageView
     private lateinit var closeButton: ImageView
+    private lateinit var bottomSheet: LinearLayoutCompat
 
     var isRecording = false
 
@@ -86,6 +93,12 @@ class RecordFragment : Fragment() {
         tvPoseName =  view.rootView.findViewById(R.id.tvPoseName)
         surfaceView =  view.rootView.findViewById(R.id.surfaceView)
         imgPose =  view.rootView.findViewById(R.id.imgPose)
+
+        //Bottom Sheet 위치 설정(MainActivity의 Bottom Navigation Bar와 위치가 충돌되는 문제 예방)
+        bottomSheet = view.rootView.findViewById<LinearLayoutCompat>(R.id.score_sheet)
+        val behavior = BottomSheetBehavior.from(bottomSheet)
+        behavior.isGestureInsetBottomIgnored = true
+
 
         if (allPermissionsGranted()) {
             openCamera()
