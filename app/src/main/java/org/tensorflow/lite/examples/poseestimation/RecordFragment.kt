@@ -168,8 +168,7 @@ class RecordFragment : Fragment() {
     /** Default device is CPU */
     private var device = Device.CPU
 
-    var timerTask: Timer? = null
-    var time = 0
+
 
 
 
@@ -238,13 +237,14 @@ class RecordFragment : Fragment() {
         forward = MediaPlayer.create(this.safeContext, R.raw.forward)
         down = MediaPlayer.create(this.safeContext, R.raw.down_swing)
 
-
+        var timerTask: Timer? = null
+        var time = 0
 
 //        tvPoseName.setText(String.format(getString(R.string.tfe_pe_tv_poseName, poseArray[1])))
 
         timerTask = kotlin.concurrent.timer(period = 100) {
             time++
-            val sec = time / 10
+            val sec = time/10
             val fiveSec = time % 70
             if (fiveSec == 14 && sec <= 42) {
                 num4?.start()

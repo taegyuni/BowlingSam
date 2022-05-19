@@ -5,6 +5,7 @@
       <map>
         <entry key="..\:/Users/yee95/Desktop/examples-master1/examples-master/lite/examples/pose_estimation/android/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/yee95/Desktop/examples-master1/examples-master/lite/examples/pose_estimation/android/app/src/main/res/layout/bottom_sheet_layout.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable-xxhdpi/button_shape_menu.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.19610507246376813" />
         <entry key="app/src/main/res/layout/activity_onboarding.xml" value="0.15520833333333334" />
         <entry key="app/src/main/res/layout/activity_signup.xml" value="0.15520833333333334" />
@@ -16,7 +17,7 @@
         <entry key="app/src/main/res/layout/fragment_practice_list.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_record.xml" value="0.1" />
         <entry key="app/src/main/res/layout/history_list_item.xml" value="0.13229166666666667" />
-        <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.1" />
+        <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.29352722167968753" />
       </map>
     </option>
   </component>
